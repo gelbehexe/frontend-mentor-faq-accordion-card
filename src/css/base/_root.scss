@@ -45,6 +45,8 @@
     --article-padding-inline-end: 0;
     --article-header-padding-block: 1rem;
     --article-drop-down-padding: 0.5rem;
+    --drop-down-marker-width: 10px;
+    --drop-down-marker-space: 0.5rem;
 
     @include media-breakpoint-min {
         // box

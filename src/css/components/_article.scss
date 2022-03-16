@@ -13,6 +13,7 @@
         position: relative;
         display: block;
         cursor: pointer;
+        padding-right: calc(var(--drop-down-marker-width) + var(--drop-down-marker-space));
 
         &::after {
             content: url("../../assets/images/icon-arrow-down.svg");
