@@ -1,29 +1,32 @@
 @use "../abstract/variables" as *;
 @use "../abstract/mixins" as *;
-@use "~@fontsource/barlow-semi-condensed/scss/mixins" as BarlowSemiCondensed;
+@use "~@fontsource/kumbh-sans/scss/mixins" as KumbHSans;
 
-@include BarlowSemiCondensed.fontFace($weight: 100);
-@include BarlowSemiCondensed.fontFace($weight: 200);
-@include BarlowSemiCondensed.fontFace($weight: 300);
-@include BarlowSemiCondensed.fontFace($weight: 400); //
-@include BarlowSemiCondensed.fontFace($weight: 500); //
-@include BarlowSemiCondensed.fontFace($weight: 600);
-@include BarlowSemiCondensed.fontFace($weight: 700);
-@include BarlowSemiCondensed.fontFace($weight: 800);
-//@include BarlowSemiCondensed.fontFace($weight: 600);
+@include KumbHSans.fontFace($weight: 400);
+@include KumbHSans.fontFace($weight: 700);
 
 html, body {
-    font-family: "Barlow Semi Condensed", sans-serif;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+html {
     font-size: var(--font-size-base);
 }
+
+body {
+    font-size: var(--font-size-default);
+    font-weight: var(--font-weight-normal);
+}
+
 a[href] {
     color: inherit;
     text-decoration: underline;
+
     &:hover, &:active {
         opacity: 0.7;
     }
 }
 
 .sr-only {
-    @include visuallyHidden();
+    @include visually-hidden;
 }

@@ -9,14 +9,32 @@
 
 </head>
 <body>
-<p>Hello content</p>
-<div class="attribution">
+<div class="wrapper">
+    <div class="content-box">
+        <div class="content">
+            <header class="header">
+                <h1 class="header__title">FAQ</h1>
+            </header>
+            <main class="main">
+                <% items.forEach(({ title, body}, idx) => { %>
+                <article class="article">
+                    <input type="radio" name="selected" class="article__selector" id="article_selector-idx-<%= idx %>">
+                    <h2 class="article__title"><label for="article_selector-idx-<%= idx %>" class="article__label"><%= title %></label></h2>
+                    <p class="article__body"><%= body %></p>
+                </article>
+                <% }) %>
+            </main>
+        </div>
+        <div class="logo"></div>
+    </div>
+</div>
+<footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="<%=
     // noinspection JSUnresolvedVariable
     user.web %>"><%= // noinspection JSUnresolvedVariable
         user.name %></a> - Sourcecode at <a href="<%= // noinspection JSUnresolvedVariable
     sourceCode %>">GitHub</a>.
-</div>
+</footer>
 </body>
 </html>

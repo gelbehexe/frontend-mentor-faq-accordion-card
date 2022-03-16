@@ -20,8 +20,7 @@ module.exports = (env, argv) => {
         // devtool: "hidden-cheap-source-map",
         devServer: {
             static: {
-                directory: "./dist",
-                publicPath: "./public",
+                directory: "./public",
             },
         },
         module: {
@@ -75,6 +74,7 @@ module.exports = (env, argv) => {
                     },
                     sourceCode:
                         "https://github.com/gelbehexe/frontend-mentor-faq-accordion-card",
+                    items: require("./src/data/items.json"),
                 },
             }),
             new MiniCssExtractPlugin({

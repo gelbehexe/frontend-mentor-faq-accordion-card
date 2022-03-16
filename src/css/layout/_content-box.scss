@@ -1,0 +1,11 @@
+.content-box {
+    width: 100%;
+    background-color: white;
+    max-width: var(--box-max-width);
+    margin-block-start: var(--box-margin-block-start);
+    margin-block-end: var(--box-margin-block-end);
+    margin-inline: auto;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--box-border-radius);
+    position: relative;
+}

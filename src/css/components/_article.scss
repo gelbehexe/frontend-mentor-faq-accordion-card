@@ -1,0 +1,55 @@
+@use "../abstract/mixins" as *;
+
+.article {
+    --article-header-padding-block: 1rem;
+    --article-drop-down-padding: 0.5rem;
+
+    border-bottom: 1px solid var(--clr-divider);
+    padding-block-start: calc(var(--article-header-padding-block) - var(--article-drop-down-padding));
+    padding-block-end: var(--article-header-padding-block);
+    padding-inline-end: var(--article-padding-inline-end);
+
+    &__label {
+        line-height: 1;
+        font-weight: var(--font-weight-normal);
+        font-size: 0.9rem;
+        padding-block: var(--article-drop-down-padding);
+        position: relative;
+        display: block;
+        cursor: pointer;
+
+        &::after {
+            content: url("../../assets/images/icon-arrow-down.svg");
+            position: absolute;
+            inset: var(--article-drop-down-padding) 0 auto auto;
+            transform-origin: center;
+        }
+    }
+
+    &__body {
+        display: none;
+    }
+
+    &__selector:checked ~ &__body {
+        display: block;
+    }
+
+
+    &__selector:checked + &__title > &__label {
+        font-weight: var(--font-weight-bold);
+
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__selector:not(:checked) + &__title > &__label {
+        &:hover, &:active {
+            color: var(--clr-accent-text);
+        }
+    }
+
+    &__selector {
+        @include visually-hidden;
+    }
+}

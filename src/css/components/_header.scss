@@ -1,0 +1,7 @@
+.header {
+    &__title {
+        font-weight: var(--font-weight-bold);
+        text-align: var(--header-text-align);
+        line-height: 1;
+    }
+}

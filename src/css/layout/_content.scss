@@ -1,0 +1,10 @@
+.content {
+    padding-block-start: var(--content-padding-block-start);
+    padding-block-end: var(--content-padding-block-end);
+    padding-inline-start: var(--content-padding-inline-start);
+    padding-inline-end: var(--content-padding-inline-end);
+    margin-inline-start: var(--content-margin-inline-start);
+    margin-inline-end: var(--content-margin-inline-end);
+    width: var(--content-width);
+    min-height: var(--content-min-height);
+}

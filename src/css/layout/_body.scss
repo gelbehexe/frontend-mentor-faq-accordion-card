@@ -1,0 +1,9 @@
+@use "../abstract/mixins" as *;
+
+body {
+    min-height: 100vh;
+    min-width: 320px;
+    background-color: var(--clr-bg-primary-1);
+    background-image: linear-gradient(to bottom, var(--clr-bg-primary-1), var(--clr-bg-primary-2));
+    color: var(--clr-primary-text);
+}

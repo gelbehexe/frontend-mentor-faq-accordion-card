@@ -1,0 +1,7 @@
+.wrapper {
+    min-height: 100vh;
+    margin-inline: var(--wrapper-margin-inline);
+    padding-inline-start: var(--box-indent);
+    display: grid;
+    align-content: center;
+}
