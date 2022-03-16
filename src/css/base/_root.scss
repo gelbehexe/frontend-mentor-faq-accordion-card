@@ -25,6 +25,9 @@
     --box-margin-block-start: 148px;
     --box-margin-block-end: 82px;
 
+    // wrapper
+    --wrapper-margin-inline: 21px;
+
     // content
     --content-min-height: 20rem;
     --content-width: auto;
@@ -40,6 +43,8 @@
 
     // article
     --article-padding-inline-end: 0;
+    --article-header-padding-block: 1rem;
+    --article-drop-down-padding: 0.5rem;
 
     @include media-breakpoint-min {
         // box

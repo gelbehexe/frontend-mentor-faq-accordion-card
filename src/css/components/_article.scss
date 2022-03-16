@@ -1,9 +1,6 @@
 @use "../abstract/mixins" as *;
 
 .article {
-    --article-header-padding-block: 1rem;
-    --article-drop-down-padding: 0.5rem;
-
     border-bottom: 1px solid var(--clr-divider);
     padding-block-start: calc(var(--article-header-padding-block) - var(--article-drop-down-padding));
     padding-block-end: var(--article-header-padding-block);
