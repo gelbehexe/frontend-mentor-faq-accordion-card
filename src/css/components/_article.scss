@@ -47,6 +47,12 @@
         &:hover, &:active {
             color: var(--clr-accent-text);
         }
+
+        &:hover {
+            @media screen and (hover: none) {
+                color: inherit;
+            }
+        }
     }
 
     &__selector:checked + &__title > &__label {
