@@ -1,25 +1,34 @@
 @use "../abstract/mixins" as *;
 
 .article {
-    border-bottom: 1px solid var(--clr-divider);
-    padding-block-start: calc(var(--article-header-padding-block) - var(--article-drop-down-padding));
-    padding-block-end: var(--article-header-padding-block);
-    padding-inline-end: var(--article-padding-inline-end);
+    // border-bottom
+    box-shadow: 0 1px 0 var(--clr-divider);
+    padding-bottom: 4px;
 
     &__label {
         font-weight: var(--font-weight-normal);
-        font-size: 0.9rem;
-        padding-block: var(--article-drop-down-padding);
+        font-size: 0.89rem;
+        padding-block-start: 0.8125rem;
+        padding-block-end: 0.6875rem;
         position: relative;
         display: block;
         cursor: pointer;
-        padding-right: calc(var(--drop-down-marker-width) + var(--drop-down-marker-space));
+
+        // avoid overlapping with drop down icon
+        padding-inline-end: var(--article-label-padding-inline-end);
+
+        &__text {
+            transform: var(--article-label-text-transform);
+            transform-origin: left;
+            display: block;
+        }
 
         &::after {
             content: url("../../assets/images/icon-arrow-down.svg");
             position: absolute;
-            inset: var(--article-drop-down-padding) 0 auto auto;
-            transform-origin: center;
+            inset: 21px var(--article-drop-down-inset-block-start) auto auto;
+            transform-origin: center 39.28%;
+            line-height: 0.1;
         }
     }
 
@@ -29,20 +38,22 @@
 
     &__selector:checked ~ &__body {
         display: block;
+        margin-block-start: -2px;
+        margin-block-end: 12px;
+        padding-inline-end: 1rem;
     }
 
+    &__selector + &__title > &__label {
+        &:hover, &:active {
+            color: var(--clr-accent-text);
+        }
+    }
 
     &__selector:checked + &__title > &__label {
         font-weight: var(--font-weight-bold);
 
         &::after {
             transform: rotate(180deg);
-        }
-    }
-
-    &__selector:not(:checked) + &__title > &__label {
-        &:hover, &:active {
-            color: var(--clr-accent-text);
         }
     }
 

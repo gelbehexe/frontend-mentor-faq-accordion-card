@@ -22,16 +22,16 @@
     --box-indent: 0;
     --box-shadow: none;
     --box-max-width: auto;
-    --box-margin-block-start: 148px;
+    --box-margin-block-start: 146px;
     --box-margin-block-end: 82px;
 
     // wrapper
-    --wrapper-margin-inline: 21px;
+    --wrapper-margin-inline: 1.5rem;
 
     // content
-    --content-min-height: 20rem;
+    --content-min-height: 2.0rem;
     --content-width: auto;
-    --content-padding-block-start: 8.5rem;
+    --content-padding-block-start: 8.4rem;
     --content-padding-block-end: 3.125rem;
     --content-padding-inline-start: 1.5rem;
     --content-padding-inline-end: var(--content-padding-inline-start);
@@ -41,12 +41,13 @@
     // header
     --header-text-align: center;
 
+    // main
+    --main-margin-block-start: 1.25rem;
+
     // article
-    --article-padding-inline-end: 0;
-    --article-header-padding-block: 1rem;
-    --article-drop-down-padding: 0.5rem;
-    --drop-down-marker-width: 10px;
-    --drop-down-marker-space: 0.5rem;
+    --article-label-padding-inline-end: 1rem;
+    --article-label-text-transform: scale(0.93);
+    --article-drop-down-inset-block-start: 0;
 
     @include media-breakpoint-min {
         // box
@@ -56,21 +57,29 @@
         --box-margin-block-start: 50px;
         --box-margin-block-end: var(--box-margin-block-start);
 
+        // wrapper
+        --wrapper-margin-inline: 1.3125rem;
+
         // content
         --content-min-height: 27rem;
         --content-width: 50%;
-        --content-padding-block-start: 4.5rem;
+        --content-padding-block-start: 4.2rem;
         --content-padding-block-end: 5.25rem;
-        --content-padding-inline-start: 0;
-        --content-padding-inline-end: 6rem;
+        --content-padding-inline-start: 1.03rem;
+        --content-padding-inline-end: 5.9rem;
         --content-margin-inline-start: auto;
         --content-margin-inline-end: 0;
 
         // header
         --header-text-align: start;
 
+        // main
+        --main-margin-block-start: 1.6rem;
+
         // article
-        --article-padding-inline-end: 0.5rem;
+        --article-label-padding-inline-end: 2.625rem;
+        --article-label-text-transform: none;
+        --article-drop-down-inset-block-start: 1rem;
     }
 }
 
