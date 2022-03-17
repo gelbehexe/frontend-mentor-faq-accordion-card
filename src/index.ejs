@@ -18,7 +18,7 @@
             <main class="main">
                 <% items.forEach(({ title, body}, idx) => { %>
                 <article class="article">
-                    <input type="radio" name="selected" class="article__selector" id="article_selector-idx-<%= idx %>">
+                    <input type="checkbox" name="selected" class="article__selector" id="article_selector-idx-<%= idx %>">
                     <h2 class="article__title"><label for="article_selector-idx-<%= idx %>" class="article__label"><%= title %></label></h2>
                     <p class="article__body"><%= body %></p>
                 </article>
