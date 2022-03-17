@@ -19,7 +19,7 @@
                 <% items.forEach(({ title, body}, idx) => { %>
                 <article class="article">
                     <input type="checkbox" name="selected" class="article__selector" id="article_selector-idx-<%= idx %>">
-                    <h2 class="article__title"><label for="article_selector-idx-<%= idx %>" class="article__label"><%= title %></label></h2>
+                    <h2 class="article__title"><label for="article_selector-idx-<%= idx %>" class="article__label"><span class="article__label__text"><%= title %></span></label></h2>
                     <p class="article__body"><%= body %></p>
                 </article>
                 <% }) %>
