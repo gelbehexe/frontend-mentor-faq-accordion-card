@@ -1,11 +1,13 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const strftime = require("strftime")
 
 module.exports = (env, argv) => {
     const mode = (argv || {}).mode || "production"
     const isDevMode = mode === "development"
 
+    // noinspection JSValidateTypes
     const res = {
         cache: false,
         mode: mode,
@@ -75,6 +77,7 @@ module.exports = (env, argv) => {
                     sourceCode:
                         "https://github.com/gelbehexe/frontend-mentor-faq-accordion-card",
                     items: require("./src/data/items.json"),
+                    build_time: strftime("%Y/%m/%d %H:%M:%S"),
                 },
             }),
             new MiniCssExtractPlugin({
